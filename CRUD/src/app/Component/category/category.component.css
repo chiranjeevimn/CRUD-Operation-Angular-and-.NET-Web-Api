@@ -1,0 +1,106 @@
+/* General Layout */
+h1{
+  text-align: center;
+  color: #991006;
+  background-color: #4CAF50;
+}
+h2{
+  text-align: center;
+  color:#0ec214;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Flexbox Layout for Left and Right Containers */
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px; /* Add space between sections */
+}
+
+/* Form Container */
+.form-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form-container h2, .list-container h2 {
+  color: #04aa36;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #05ac29;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: #007B9E;
+}
+
+/* Category List Table */
+.category-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.category-table th, .category-table td {
+  padding: 12px;
+  border: 1px solid #af0707;
+  text-align:center;
+}
+
+.category-table th {
+  background-color: #59b4e9;
+}
+
+.category-table tbody tr:hover {
+  background-color: #61ecce;
+}
+
+/* Button Styles */
+.edit-btn, .delete-btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.list-container {
+  flex: 2;
+}

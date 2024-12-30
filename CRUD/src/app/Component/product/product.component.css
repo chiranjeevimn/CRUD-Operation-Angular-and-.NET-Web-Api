@@ -1,0 +1,107 @@
+/* Container and General Styles */
+h1{
+  color: #f11c0d;
+  text-align: center;
+  background-color: rgb(78, 236, 126);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* Flexbox Layout for Left and Right Containers */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Form Container (Left Side) */
+.form-container {
+  flex: 1;
+  margin-right: 20px; /* Add space between the two sections */
+}
+
+.form-container h2 {
+  color: #0ec01d;
+}
+
+.form-group {
+  margin-bottom: 2px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin: 2px 0;
+  border: 1px solid #0e9e15;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: #007B9E;
+}
+
+/* Product List Container (Right Side) */
+.list-container {
+  flex: 2;
+}
+
+h2 {
+  color: #08ad47;
+  text-align: center;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.product-table th, .product-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #f4f4f4;
+}
+
+.product-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Styles */
+.edit-btn, .delete-btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}

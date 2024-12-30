@@ -1,0 +1,66 @@
+<h1>Product Management</h1>
+<div class="container">
+  <div class="row">
+    <!-- Add Product Form (Left Container) -->
+    <div class="form-container">
+      <h2>{{ editingProductId === null ? 'Add Product' : 'Edit Product' }}</h2>
+      <form [formGroup]="productForm" (ngSubmit)="addProduct()">
+        <div class="form-group">
+          <label for="productId">Product Id:</label>
+          <input id="productId" type="number" formControlName="productId" class="input-field" />
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input id="name" type="text" formControlName="name" class="input-field" />
+        </div>
+        <div class="form-group">
+          <label for="salesPrice">Sales Price:</label>
+          <input id="salesPrice" type="number" formControlName="salesPrice" class="input-field" />
+        </div>
+        <div class="form-group">
+          <label for="mrp">MRP:</label>
+          <input id="mrp" type="number" formControlName="mrp" class="input-field" />
+        </div>
+        <div class="form-group">
+          <label for="categoryId">Category ID:</label>
+          <input id="categoryId" type="number" formControlName="categoryId" class="input-field" />
+        </div>
+        <button type="submit" class="submit-btn">
+          {{ editingProductId === null ? 'Add Product' : 'Update Product' }}
+        </button>
+      </form>
+    </div>
+
+    <!-- Product List (Right Container) -->
+    <div class="list-container">
+      <h2>Product List</h2>
+      <div class="table-responsive">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Product ID</th>
+              <th>Name</th>
+              <th>Sales Price</th>
+              <th>MRP</th>
+              <th>Category ID</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{ product.productId }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.salesPrice }}</td>
+              <td>{{ product.mrp }}</td>
+              <td>{{ product.categoryId }}</td>
+              <td>
+                <button class="edit-btn" (click)="editProduct(product)">Edit</button>
+                <button class="delete-btn" (click)="delete(product.productId)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

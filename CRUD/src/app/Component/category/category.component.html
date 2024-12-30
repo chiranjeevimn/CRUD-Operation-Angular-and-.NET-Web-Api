@@ -1,0 +1,48 @@
+<h1>Category Management</h1>
+<div class="container">
+  <div class="row">
+    <!-- Add/Edit Category Form (Left Container) -->
+    <div class="form-container">
+      <h2>{{ editingCategoryId === null ? 'Add Category' : 'Edit Category' }}</h2>
+      <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">
+        <div class="form-group">
+          <label for="categoryId">Category Id:</label>
+          <input id="categoryId" type="number" formControlName="categoryId" class="input-field" [readonly]="editingCategoryId !== null" />
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input id="name" type="text" formControlName="name" class="input-field" />
+        </div>
+        <button type="submit" class="submit-btn">
+          {{ editingCategoryId === null ? 'Add Category' : 'Update Category' }}
+        </button>
+      </form>
+    </div>
+
+    <!-- Category List (Right Container) -->
+    <div class="list-container">
+      <h2>Category List</h2>
+      <div class="table-responsive">
+        <table class="category-table">
+          <thead>
+            <tr>
+              <th>Category ID</th>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let category of categories">
+              <td>{{ category.categoryId }}</td>
+              <td>{{ category.name }}</td>
+              <td>
+                <button class="edit-btn" (click)="editCategory(category)">Edit</button>
+                <button class="delete-btn" (click)="deleteCategory(category.categoryId)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
